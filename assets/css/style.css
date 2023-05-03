@@ -1,0 +1,119 @@
+@font-face {
+    font-family: vina;
+    src: url(../Vina_Sans/VinaSans-Regular.ttf);
+}
+
+:root {
+    --color-primary: #ab79d6;
+    --color-secondary: #d367c1;
+    --color-background: #27272c;
+    --color-yellow: #dedf40;
+    --color-green: #62cb5c;
+    --color-blue: #00bbcb;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    background-color: var(--color-background); 
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    min-height: 100vh;
+    font-family:'Courier New', Courier, monospace;
+}
+
+h1{
+    color: var(--color-primary);
+    font-family: "vina";
+    font-size: 6rem;
+    font-weight: 200;
+    display: flex;
+    justify-content: center;
+    animation: color-change 3s ease-in-out infinite;
+}
+
+form{
+    background-color: #00bacb9a;
+    margin: 1% 20%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 4px;
+}
+
+h2{
+    color: var(--color-secondary);
+    font-family: "vina";
+    font-size: 3rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+p{
+    font-size: 2rem;
+    color: var(--color-green);
+}
+
+label, input{ 
+    color: var(--color-yellow);
+    margin: 2rem 1rem;
+    font-size: 1.8rem;
+}
+
+label{
+    margin: 1rem;
+}
+
+#zeichenkette, #trennungsposition{
+    width: 65rem;
+    background-color: rgba(255, 255, 255, 0.54);
+    border: none;
+    box-shadow: black 5px 5px 10px;
+    display: block;
+}
+
+#submit{
+    width: 20rem;
+    display: block;
+    margin: 4rem auto 5rem auto;
+    padding: 0.8rem;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgb(0, 0, 0) 0px 5px 15px;
+    background-image: linear-gradient( 135deg, var(--color-secondary) 10%,var(--color-yellow) 25%,var(--color-green) 50%,var(--color-blue) 75%,var(--color-primary) 90%);
+    font-family: "vina";
+    font-size: 3rem;
+}
+
+#submit:hover{
+    cursor: pointer;
+    transform: scale(2);
+}
+
+article{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20% 0 20%;
+}
+
+@keyframes color-change {
+    0%, 100% { color: var(--color-primary); }
+    20% { color: var(--color-secondary); }
+    40% { color: var(--color-yellow); }
+    60% { color: var(--color-blue); }
+    80% { color: var(--color-green); }
+  }
